@@ -1,3 +1,117 @@
-body {
-    background-color: #242424;
+:root {
+    --cor-neutra-escura: #111111;
+    --cor-neutra-clara: #f5f5f5;
+    --cor-primaria-hover: #834de8;
+    --cor-primaria: #6528d3;
 }
+
+
+body {
+    background-color: var(--cor-neutra-escura);
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        " header"
+        " main"
+        " footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #222222;
+    padding: 30px 0;
+}
+
+.header .menu-principal {
+    background-color: #222222;
+    display: none;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header .menu-principal ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.header .menu-principal ul li a {
+    letter-spacing: 0.1rem;
+    color: var(--cor-neutra-clara);
+    padding: 1rem;
+}
+
+.header .menu-principal ul li a:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.header .menu-ativo.menu-principal {
+    display: block;
+}
+
+
+.header-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    color: var(--cor-neutra-clara);
+}
+
+.header-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-hamburguer {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.menu-hamburguer span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.botao-carrinhp {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    position: relative;
+}
+
+.botao-carrinhp span {
+    color: var(--cor-neutra-clara);
+    background-color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 27px;
+    left: 28px;
+
+    display: flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+

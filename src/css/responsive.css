@@ -1,0 +1,24 @@
+@media (min-width: 948px) {
+  
+  
+    .header .menu-principal {
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .header .menu-principal ul {
+        flex-direction: row;
+    }
+
+   
+    
+}
+
+@media(min-width: 1140px) {
+    .header{
+        max-width: 1140px;
+        margin: 0 auto ;
+    }
+    
+}

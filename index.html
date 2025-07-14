@@ -4,30 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="/src/css/style.css">
-
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <title>E-comerce</title>3
 </head>
 
 <body>
-    <header>
-        <a href="/">
-            <img src="/src/images/logo.svg" alt="E-commerce Logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#bout">Sobre</a></li>
-                <li><a href="#contact">Fale conosco</a></li>
-                <li><a href="faq">Perguntas frequentes</a></li>
-            </ul>
-        </nav>
-        <button>
-            <img src="/src/images/icone_carrinho.svg" alt="carrinho de compras">
-        </button>
+    <header class="header">
+        <div class="header-conteudo">
+
+            <div class="header-esquerda">
+
+                <button class="menu-hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="/">
+                    <img src="/src/images/logo.svg" alt="E-commerce Logo">
+                </a>
+            </div>
+
+            <nav class="menu-principal ">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#bout">Sobre</a></li>
+                    <li><a href="#contact">Fale conosco</a></li>
+                    <li><a href="faq">Perguntas frequentes</a></li>
+                </ul>
+            </nav>
+            <button class="botao-carrinhp">
+                <img src="/src/images/icone_carrinho.svg" alt="carrinho de compras">
+                <span id="contador-carrinho">0</span>
+            </button>
+        </div>
     </header>
     <main>
         <section>
@@ -48,7 +65,7 @@
                 </li>
                 <li>
                     <figure>
-                        <img src="./src/images/camiseta_roxa.jp" alt="camiseta roxa">
+                        <img src="./src/images/camiseta_roxa.jpg" alt="camiseta roxa">
                         <figcaption>Camiseta dev em doblo</figcaption>
                     </figure>
                     <div>
@@ -134,9 +151,22 @@
                                 td>Camiseta Dev em doblo - roxa</td>
                                 <td>R$ 89,00</td>
                                 <td>
-                                    <input type="number" value="1" min="1"></td>
-                                    <td>R$ 89, 00</td>
-                                    <td><button id="deletar">Deletar</button></td>
+                                    <input type="number" value="1" min="1">
+                                </td>
+                                <td>R$ 89, 00</td>
+                                <td><button id="deletar">Deletar</button></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td><img src="./src/images/camiseta_roxa.jpg" alt="Camiseta Dev em doblo  - roxa"></td>
+                                td>Camiseta Dev em doblo - roxa</td>
+                                <td>R$ 89,00</td>
+                                <td>
+                                    <input type="number" value="1" min="1">
+                                </td>
+                                <td>R$ 89, 00</td>
+                                <td><button id="deletar">Deletar</button></td>
                             </tr>
                         </tbody>
                     </table>
